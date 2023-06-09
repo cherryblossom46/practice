@@ -1,0 +1,283 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+/* navの開始 */
+.main-header .title,.burger{
+ margin-top:30px;
+}
+.main-header {
+  display:flex;
+  margin-left:14%;
+  justify-content:space-between;
+  width:71%;
+  position:absolute;
+  top:0;
+  margin-bottom:50px;
+  background-color:white;
+  height:100px;
+}
+nav{
+  display:flex;
+  align-items:center;
+  height:9vh;
+}
+.nav-links{
+  background-color:rgba(0,0,0,0.5);
+  position:absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  transform: translatex(-100%);
+  z-index:10;
+}
+.nav-links li {
+  list-style:none;
+  margin-left:50px;
+  margin-bottom:20px;
+  opacity:0;
+}
+.nav-links li:first-child {
+  margin-top:50px;
+}
+.nav-links a{
+  text-decoration:none;
+  color:white;
+}
+.nav-active {
+  transform: translatex(0%)!important;
+}
+.burger div {
+  background-color:black;
+  height:3px;
+  margin:5px;
+  width:30px;
+  transition: all .5s ease-in-out;
+}
+.burger {
+  cursor: pointer;
+  z-index: 10;
+}
+body,html {
+  overflow-x: hidden;
+  height:100%;
+}
+footer {
+  position:sticky;
+  top:100vh;
+  margin-top:100px;
+}
+@keyframes navLinksFade {
+  0% {
+    opacity:0;
+    transform:translateX(-50px);
+  }
+  100% {
+    opacity:1;
+    transform: translatex(0);
+  }
+}
+.toggle .line1{
+  transform: rotate(45deg) translatey(5.5px);
+}
+.toggle .line2{
+  transform: rotate(-405deg) translatey(-5.5px);
+}
+.toggle div {
+  background-color:white;
+}
+
+/* wrapper */
+.wrapper {
+  width:72%;
+  margin:auto;
+  margin-top:30px;
+}
+h2 {
+  font-size: 14px;;
+}
+/* toppage*/
+
+img {
+  width:100%;
+}
+.container {
+  display:grid;
+  width:70%;
+  gap:20px;
+  grid-template-columns: repeat(4,1fr);
+  margin:auto;
+  justify-content: center;
+}
+a {
+  text-decoration:none;
+  color:black;
+  font-size:12px;
+}
+.link {
+  text-align:center;
+  margin-top:50px;
+}
+.footer-list {
+  width:70%;
+  display:flex;
+  margin:auto;
+  justify-content: space-between;
+}
+.sns-link {
+  display:flex;
+  gap:20px;
+}
+.sns-link li {
+  list-style:none;
+}
+/* Products改良前 */
+.imagelist{
+  width:100%;
+  margin:auto;
+  margin-top:20px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:50px 4%;
+}
+.imagelist li {
+  width:22%;
+  height:300px;
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:cover;
+  list-style: none;
+}
+.pagelist {
+  display:flex;
+  justify-content:center;
+  margin-top:50px;
+  gap:50px;
+}
+
+/* 改良後 */
+.product-items a:hover img{
+  transform:scale(1.05);
+  opacity:.7;
+  z-index:-1;
+  position: relative;
+}
+.product-items{ 
+  text-align:center;
+  transition:all  .2s;
+}
+.catalogpage{
+  width:22%;
+  margin:auto;
+  margin-right:2%;
+  margin-bottom:30px;
+  display:inline-block;
+  z-index: -5;
+}
+.catalogpage h3 {
+  border:none;
+  padding:0;
+}
+/* 注文時 */
+#submit {
+  border-radius: 20px;
+  color:white;
+  display: block;
+  margin:auto;
+  margin-top:100px;
+  font-size: 30px;
+  padding:10px;
+  background-color:rgb(255, 145, 0);
+  font-size: 50px;
+}
+#submit:hover {
+  opacity:0.7;
+}
+.order-wrapper {
+  text-align:center;
+  width:50%;
+  margin:auto;
+  margin-top:100px;
+  background-color:rgba(140, 172, 0, 0.651);
+  height:600px;
+  padding-top:20px;
+  align-items:center;
+}
+.order-wrapper p{
+  float:left;
+  line-height:30px;
+  padding-left:0;
+}
+.order-wrapper h2 {
+  margin:50px auto;
+  font-size:20px;
+}
+.order-amount{
+  width:60%;
+}
+.order-price {
+  width:30%;
+}
+ h3 {
+  border-top: solid gray 1px;
+  clear:left;
+  padding-top: 30px;
+}
+
+/* About */
+#About {
+  width:70%;
+  margin:auto;
+  font-size:12px;
+  margin-top:50px;
+}
+.About {
+  width:40%;
+}
+#About p {
+  margin-top:30px;
+  line-height:25px;
+}
+/* Company */
+#Company {
+  width:69%;
+  margin:auto;
+  font-size:12px;
+}
+.Company {
+  margin-top:30px;
+  width:40%;
+}
+dl {
+  display:flex;
+  flex-flow:row wrap;
+  width:100%;
+}
+dl dt {
+  width:15%;
+  padding-top:30px;
+  border-bottom:solid 1px gray;
+  padding-bottom:30px;
+}
+ dl dd {
+  width:85%;
+  border-bottom:solid 1px gray;
+  padding-bottom:30px;
+  padding-top:30px;
+  padding-left:100px;
+}
+ dl dd:last-child {
+  border-bottom:none;
+}
+dl dt:nth-child(11) {
+  border-bottom:none;
+}
+.googlemap iframe {
+  aspect-ratio:16/9;
+  width:100%;
+}
+.googlemap {
+  margin-bottom:100px;
+}

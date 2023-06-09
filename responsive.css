@@ -1,0 +1,46 @@
+@media screen and (max-width:768px) {
+  .main-header {
+    width:100%;
+    margin:auto;
+
+  }
+  .container {
+    grid-template-columns: repeat(2,1fr);
+  }
+  .footer-list {
+    flex-direction: column;
+  }
+  #Company {
+    width:100%
+  }
+  .Company {
+    width:90%;
+    margin:auto;
+  }
+  dl {
+    flex-flow:column;
+  }
+  dl dt {
+    border:none;
+    padding-bottom:0;
+  }
+  dl dd {
+    padding:0;
+    padding-bottom:30px;
+  }
+  .wrapper{
+    width:100%;
+  }
+  .catalogpage {
+    width:46%;
+  }
+  #About {
+    width:100%;
+  }
+  .About {
+    width:90%;
+    margin:auto;
+  }
+
+
+}
